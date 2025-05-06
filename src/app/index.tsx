@@ -26,7 +26,7 @@ export default function Index() {
     return (
         <View style={{ ...StyleSheet.absoluteFillObject }}>
             <Texture />
-            <View style={{ alignItems: "flex-end", marginRight: 24, marginBottom: 24, marginTop: Platform.OS === "ios" ? 40 : 0 }}>
+            <View style={{ alignItems: "flex-end", marginRight: 24, marginBottom: 24, marginTop: 40 }}>
                 <Menu height={18} width={18} />
             </View>
             <View style={{ flexDirection: "row", }}>
