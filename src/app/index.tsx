@@ -1,19 +1,22 @@
 import { Dimensions, FlatList, Image, Platform, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import img1 from "../assets/img-1.jpg"
-import img2 from "../assets/img-2.png"
-import img3 from "../assets/img-3.png"
-import georgia from "../assets/georgia.png"
+import img1 from "../../assets/images/img-1.jpg"
+import img2 from "../../assets/images/img-2.png"
+import img3 from "../../assets/images/img-3.png"
+import georgia from "../../assets/images/georgia.png"
 import { Home } from "../components/icons/Home";
 import { Magic } from "../components/icons/Magic";
 import { Menu } from "../components/icons/Menu";
 import { BlurView } from "expo-blur";
 import { LinearGradient } from "expo-linear-gradient"
 import Texture from "../components/Texture";
+import kohlerLogo from "../../assets/images/Kohler-logo.png"
+import jmvLogo from "../../assets/images/JMV-logo.png"
+import totoLogo from "../../assets/images/Toto-logo.png"
 
 const { width, height } = Dimensions.get("window");
 
 const ITEM_WIDTH = width * 0.9;
-const ITEM_HEIGHT = height * 0.55
+const ITEM_HEIGHT = height * 0.65
 const ITEM_SPACING = 10;
 
 const DATA = [
@@ -26,51 +29,20 @@ export default function Index() {
     return (
         <View style={{ ...StyleSheet.absoluteFillObject }}>
             <Texture />
-            <View style={{ alignItems: "flex-end", marginRight: 24, marginBottom: 24, marginTop: 40 }}>
+            <View style={{ alignItems: "flex-end", marginRight: 24, marginBottom: 24, marginTop: 48 }}>
                 <Menu height={18} width={18} />
             </View>
-            <View style={{ flexDirection: "row", }}>
-
-                <View style={{
-                    position: 'relative',
-                    width: 64,
-                    height: 64,
-                    marginBottom: 24,
-                    marginLeft: 12,
-                    borderRadius: 16,
-                    overflow: 'hidden',
-                    backgroundColor: 'transparent'
-                }}>
-                    <BlurView
-                        intensity={10}
-                        tint="light"
-                        style={{
-                            position: 'absolute',
-                            top: 0,
-                            left: 0,
-                            right: 0,
-                            bottom: 0,
-                            borderRadius: 16
-                        }}
-                    />
-
-
-                    <View style={{
-                        flex: 1,
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        padding: 8
-                    }}>
-                        <Image
-                            source={georgia}
-                            style={{
-                                width: 48,
-                                height: 48,
-                                borderRadius: 12
-                            }}
-                        />
-                    </View>
-                </View>
+            <View style={{ flexDirection: "row", alignItems: "center", marginBottom: 36 }}>
+                <Image
+                    source={georgia}
+                    style={{
+                        width: 48,
+                        height: 48,
+                        borderRadius: 12,
+                        marginLeft: 24,
+                        marginRight: 8
+                    }}
+                />
 
                 <View style={{ marginLeft: 8 }}>
                     <Text style={{ color: "#848280", fontSize: 24 }}>Georgia</Text>
@@ -106,6 +78,10 @@ export default function Index() {
                                 bottom: 0,
                                 resizeMode: "cover"
                             }}
+                        />
+                        <LinearGradient
+                            colors={['rgba(0,0,0,0)', 'rgba(0,0,0,0.3)']}
+                            style={[StyleSheet.absoluteFill, { flex: 1 }]}
                         />
                         <View style={{ padding: 24 }}>
                             <Text style={{ color: "#FFFFFF", fontSize: 32, marginBottom: 12 }}>{item.title}</Text>
@@ -143,14 +119,32 @@ export default function Index() {
             >
                 <View style={StyleSheet.absoluteFill}>
                     <View style={{ flex: 1, flexDirection: "column" }}>
-                        {Array.from({ length: 20 }).map((_, i) =>
-                            <View key={i} style={{ width: "100%", flexDirection: "row", justifyContent: "space-around" }}>
-                                <Text> BRANDS </Text>
-                                <Text> BRANDS </Text>
-                                <Text> BRANDS </Text>
-                                <Text> BRANDS </Text>
-                            </View>
-                        )}
+                        <Text style={{ color: "#31312B", textAlign: "center", fontSize: 16, marginTop: 40, marginBottom: 24 }}>
+                            <Text style={{ color: "#848280" }}>Featuring the </Text> Industries Top Brands
+                        </Text>
+                        <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
+                            <Image
+                                source={kohlerLogo}
+                                style={{
+                                    tintColor: "black",
+                                    resizeMode: "contain"
+                                }}
+                            />
+                            <Image
+                                source={jmvLogo}
+                                style={{
+                                    tintColor: "black",
+                                    resizeMode: "contain"
+                                }}
+                            />
+                            <Image
+                                source={totoLogo}
+                                style={{
+                                    tintColor: "black",
+                                    resizeMode: "contain"
+                                }}
+                            />
+                        </View>
                     </View>
                 </View>
 
@@ -165,8 +159,9 @@ export default function Index() {
                     backgroundColor: "#1D1C19",
                     height: 52,
                     width: 132,
+                    padding: 6,
                     position: "absolute",
-                    bottom: 30,
+                    bottom: 50,
                     borderRadius: 999,
                     left: width / 2 - (132 / 2),
                     flexDirection: "row",
@@ -176,8 +171,8 @@ export default function Index() {
             >
                 <TouchableOpacity style={{
                     backgroundColor: "#31312B",
-                    height: 40,
-                    width: 50,
+                    height: "100%",
+                    flex: 1,
                     borderRadius: 999,
                     alignItems: "center",
                     justifyContent: "center",
@@ -186,13 +181,13 @@ export default function Index() {
                 </TouchableOpacity>
                 <TouchableOpacity style={{
                     backgroundColor: "#1D1C19",
-                    height: 40,
-                    width: 50,
+                    height: "100%",
+                    flex: 1,
                     borderRadius: 999,
                     alignItems: "center",
                     justifyContent: "center",
                 }}>
-                    <Magic height={28} width={28} />
+                    <Magic height={28} width={28} color="#777775" />
                 </TouchableOpacity>
             </View>
 

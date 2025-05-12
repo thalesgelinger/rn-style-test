@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Image, Dimensions, StyleSheet } from 'react-native';
-import bgTexture from "../assets/bg-texture.png"
+import bgTexture from "../../assets/images/bg-texture.png"
 
 export default function Texture() {
     const textureSize = 600;
