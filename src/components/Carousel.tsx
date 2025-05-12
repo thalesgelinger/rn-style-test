@@ -7,7 +7,7 @@ import { LinearGradient } from "expo-linear-gradient";
 const { width, height } = Dimensions.get("window");
 
 const ITEM_WIDTH = width * 0.92;
-const ITEM_HEIGHT = height * 0.65
+const ITEM_HEIGHT = height * 0.60
 const ITEM_SPACING = 10;
 
 const DATA = [
@@ -29,6 +29,7 @@ export const Carousel = () => {
                     style={{
                         position: "relative",
                         height: ITEM_HEIGHT,
+                        minHeight: 432,
                         width: ITEM_WIDTH,
                         justifyContent: "flex-end",
                         alignItems: "flex-start",

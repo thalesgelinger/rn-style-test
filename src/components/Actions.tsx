@@ -1,10 +1,8 @@
 
 import React from 'react'
-import { Dimensions, TouchableOpacity, View } from 'react-native'
+import { TouchableOpacity, View } from 'react-native'
 import { Home } from "./icons/Home";
 import { Magic } from "./icons/Magic";
-
-const { width } = Dimensions.get("window");
 
 export const Actions = () => {
     return (
@@ -14,13 +12,8 @@ export const Actions = () => {
                 height: 52,
                 width: 132,
                 padding: 6,
-                position: "absolute",
-                bottom: 50,
                 borderRadius: 999,
-                left: width / 2 - (132 / 2),
                 flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "center",
             }}
         >
             <TouchableOpacity style={{
