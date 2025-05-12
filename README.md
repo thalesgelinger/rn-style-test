@@ -1,5 +1,7 @@
 # React Native Test
 
+![simulator_screenshot_8F543BFB-2003-4BA1-BE39-5CF22557C804](https://github.com/user-attachments/assets/f308b3c5-823e-47d8-b0c1-a050fd597a49)
+
 # Running locally
 
 1. Install dependencies
