@@ -9,20 +9,26 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.thalesgelinger.mocktest"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.thalesgelinger.mocktest"
     },
     "web": {
       "bundler": "metro",
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
+    "assetBundlePatterns": [
+      "assets/images/*",
+      "assets/fonts/*"
+    ],
     "plugins": [
       "expo-router",
       [
@@ -37,6 +43,17 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "268a23b1-8f6b-4e30-bdca-0354b9920bfb"
+      }
+    },
+    "owner": "thalesgelinger",
+    "runtimeVersion": "1.0.0",
+    "updates": {
+      "url": "https://u.expo.dev/268a23b1-8f6b-4e30-bdca-0354b9920bfb"
     }
   }
 }
